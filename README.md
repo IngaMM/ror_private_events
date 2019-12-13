@@ -15,5 +15,7 @@ This app is an e manager for private events which allows users to create events 
 
 A user can create events. A user can attend many events. An event can be attended by many users. This is modelled by many-to-many relationships.
 
+A live version of this app can be found at https://nameless-retreat-94884.herokuapp.com
+
 Requirements
 Ruby on Rails
