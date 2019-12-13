@@ -1,0 +1,16 @@
+<header>
+  <% if logged_in? %>
+    <p> You are logged in as <%= link_to current_user.name, user_path(current_user) %> </p>
+  <% end %>
+  <nav>
+    <%= link_to "Home", root_path %>
+    &nbsp
+    <%= link_to "View all events", events_path %>
+    &nbsp
+    <% if logged_in? %>
+      <%= link_to "Log out", logout_path, method: :delete %>
+    <% else %>
+      <%= link_to "Log in", login_path %>
+    <% end %>
+  </nav>
+</header>

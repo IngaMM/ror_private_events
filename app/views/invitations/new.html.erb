@@ -1,0 +1,10 @@
+<h1>Send out an invitation for "<%= params[:event_description] %>"</h1>
+
+<div>
+  <%= form_for(:invitation, url: invitations_path) do |f| %>
+    <%= f.label :username %>
+    <%= f.collection_select :username, User.order(:name),:name,:name%>
+    <%= hidden_field_tag(:event_description, params[:event_description]) %>
+    <%= f.submit "Invite"%>
+  <% end %>
+</div>

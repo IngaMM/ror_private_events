@@ -1,0 +1,21 @@
+<h1>Event data</h1>
+
+<div>
+  <%= @event.description %>
+</div>
+<br>
+<div>
+  <strong>Created by:</strong> <%= @creator.name %>
+</div>
+<br>
+<div>
+  <strong>Attendees:</strong>
+  <ul>
+    <% @event_attendances.each do |ea| %>
+      <li>
+        <%=ea.attendee.name%>
+      </li>
+    <% end %>
+  </ul>
+
+</div>

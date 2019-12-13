@@ -1,0 +1,27 @@
+<h1>All events</h1>
+
+<br>
+<div>
+<strong>Previous events:</strong>
+<ul>
+  <% @previous_events.each do |event| %>
+    <li>
+      <%=event.description%>, created by <%=event.creator.name%>
+    </li>
+  <% end %>
+</ul>
+<br>
+<div>
+<strong>Upcoming events:</strong>
+<ul>
+  <% @upcoming_events.each do |event| %>
+    <li>
+      <%=event.description%>, created by <%=event.creator.name%>
+    </li>
+  <% end %>
+</ul>
+<% if logged_in? %>
+  <div>
+    <%= link_to "Create a new event", new_event_path %>
+  </div>
+<% end %>

@@ -1,0 +1,9 @@
+<h1>Create account</h1>
+
+<div>
+  <%= form_for(@user, url: signup_path) do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.submit "Create account"%>
+  <% end %>
+</div>
